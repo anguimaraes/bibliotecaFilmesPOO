@@ -1,3 +1,7 @@
+import br.com.alura.bibliotecaFilmesPOO.modelos.Filme;
+import br.com.alura.exercicios.Calculadora;
+import br.com.alura.exercicios.Pessoa;
+
 public class Principal {
     public static void main(String[] args) {
         //intanciando a classe
@@ -5,16 +9,16 @@ public class Principal {
         Pessoa pessoa1 = new Pessoa();
         Calculadora calculadora1 = new Calculadora();
 
-       /*meuFilme.nome = "O poderoso chefão";
-        meuFilme.anoDeLancamento = 1970;
-        meuFilme.duracaoEmMinutos = 180;
-        meuFilme.exibeFichaTecnica();*/
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
+        meuFilme.exibeFichaTecnica();
 
         meuFilme.avalia(8);
         meuFilme.avalia(5);
         meuFilme.avalia(10);
-        System.out.println("O total de avaliações é: " + meuFilme.getTotalDeAvaliacoes());
-        System.out.println(meuFilme.pegaMedia());
+        //System.out.println("O total de avaliações é: " + meuFilme.getTotalDeAvaliacoes());
+        //System.out.println(meuFilme.pegaMedia());
 
         //pessoa1.exibeOlaMundo();
 
