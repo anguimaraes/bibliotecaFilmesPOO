@@ -30,7 +30,10 @@ public class Principal {
         serie.setNome("The last of us");
         serie.setTemporadas(1);
         serie.setAnoDeLancamento(2023);
+        serie.setEpisodiosPorTemporada(8);
+        serie.setMinutosPorEpisodio(60);
 
-        serie.exibeFichaTecnica();
+        System.out.println("A duração total da série The last of us em minutos é: " + serie.getDuracaoEmMinutos() + " minutos");
+
     }
 }
