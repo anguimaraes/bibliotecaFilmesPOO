@@ -1,4 +1,5 @@
 import br.com.alura.bibliotecaFilmesPOO.modelos.Filme;
+import br.com.alura.bibliotecaFilmesPOO.modelos.Serie;
 import br.com.alura.exercicios.Calculadora;
 import br.com.alura.exercicios.Pessoa;
 
@@ -24,5 +25,12 @@ public class Principal {
 
         /*calculadora1.dobraNumero(10);
         System.out.println(calculadora1.resultado);*/
+
+        Serie serie = new Serie();
+        serie.setNome("The last of us");
+        serie.setTemporadas(1);
+        serie.setAnoDeLancamento(2023);
+
+        serie.exibeFichaTecnica();
     }
 }
