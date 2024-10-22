@@ -1,7 +1,7 @@
 package br.com.alura.CalculadoraDeTempo;
 
-import br.com.alura.bibliotecaFilmesPOO.modelos.Filme;
-import br.com.alura.bibliotecaFilmesPOO.modelos.Serie;
+
+import br.com.alura.bibliotecaFilmesPOO.modelos.Titulo;
 
 public class CalculadoraDeTempo {
     private int tempoTotal;
@@ -10,11 +10,15 @@ public class CalculadoraDeTempo {
         return tempoTotal;
     }
 
-    public void inclui(Filme f){
-        tempoTotal += f.getDuracaoEmMinutos();
-    }
+//    public void inclui(Filme f){
+//        tempoTotal += f.getDuracaoEmMinutos();
+//    }
+//
+//    public void inclui(Serie s){
+//        tempoTotal += s.getDuracaoEmMinutos();
+//    }
 
-    public void inclui(Serie s){
-        tempoTotal += s.getDuracaoEmMinutos();
+    public void inclui(Titulo titulo){
+        tempoTotal += titulo.getDuracaoEmMinutos();
     }
 }
