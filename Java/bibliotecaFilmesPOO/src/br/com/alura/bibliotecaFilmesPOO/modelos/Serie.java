@@ -1,10 +1,22 @@
 package br.com.alura.bibliotecaFilmesPOO.modelos;
 
-public class Serie extends Titulo{
+import br.com.alura.CalculadoraDeTempo.Classificavel;
+
+public class Serie extends Titulo implements Classificavel {
     private int temporadas;
     private boolean ativa;
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
+
+    public int getTotalVisualizacoes() {
+        return totalVisualizacoes;
+    }
+
+    public void setTotalVisualizacoes(int totalVisualizacoes) {
+        this.totalVisualizacoes = totalVisualizacoes;
+    }
+
+    private int totalVisualizacoes;
 
     public int getTemporadas() {
         return temporadas;
@@ -41,5 +53,14 @@ public class Serie extends Titulo{
     @Override
     public int getDuracaoEmMinutos(){
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (totalVisualizacoes > 100){
+            return 4;
+        } else {
+            return 2;
+        }
     }
 }

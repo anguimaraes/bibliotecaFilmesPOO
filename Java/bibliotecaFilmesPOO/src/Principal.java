@@ -1,4 +1,6 @@
 import br.com.alura.CalculadoraDeTempo.CalculadoraDeTempo;
+import br.com.alura.CalculadoraDeTempo.FiltroRecomendacao;
+import br.com.alura.bibliotecaFilmesPOO.modelos.Episodio;
 import br.com.alura.bibliotecaFilmesPOO.modelos.Filme;
 import br.com.alura.bibliotecaFilmesPOO.modelos.Serie;
 import br.com.alura.exercicios.Calculadora;
@@ -26,8 +28,8 @@ public class Principal {
         filme1.avalia(8);
         filme1.avalia(5);
         filme1.avalia(10);
-        //System.out.println("O total de avaliações é: " + meuFilme.getTotalDeAvaliacoes());
-        //System.out.println(meuFilme.pegaMedia());
+        //System.out.println("O total de avaliações é: " + filme1.getTotalDeAvaliacoes());
+        //System.out.println(filme1.pegaMedia());
 
 
 
@@ -63,6 +65,15 @@ public class Principal {
         calculadora.inclui(serie1);
         calculadora.inclui(serie2);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(filme1);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(serie1);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
 
 
 
